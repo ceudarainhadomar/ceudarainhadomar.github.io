@@ -32,12 +32,12 @@ body{font-family:var(--sans);color:var(--text);background:#fff;line-height:1.75;
   background:radial-gradient(ellipse 80% 60% at 50% 100%,rgba(30,95,138,0.45) 0%,transparent 70%);
   pointer-events:none;
 }
-.hero-logo{width:150px;height:150px;object-fit:contain;margin-bottom:1.5rem;position:relative;padding:14px;background:rgba(90,163,214,0.08);border-radius:50%;filter:drop-shadow(0 10px 40px rgba(30,80,120,0.3));position:relative;z-index:1}
+.hero-logo{width:150px;height:150px;object-fit:contain;margin-bottom:1.5rem;position:relative;padding:14px;background:rgba(90,163,214,0.08);border-radius:50%;filter:drop-shadow(0 10px 40px rgba(30,80,138,0.3))}
 .hero-eyebrow{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:1.2rem;position:relative}
 .hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5.5vw,3.8rem);font-weight:400;color:#fff;line-height:1.15;max-width:700px;margin:0 auto 1rem;position:relative}
 .hero h1 em{font-style:italic;color:var(--gold-light)}
 .hero-lead{font-size:clamp(1rem,2vw,1.1rem);color:rgba(255,255,255,.7);max-width:560px;margin:0 auto 2.5rem;font-weight:300;position:relative}
-.urgency-pill{display:inline-flex;align-items:center;gap:.6rem;background:rgba(200,151,58,.12);border:1px solid rgba(200,151,58,.35);border-radius:99px;padding:8px 20px;font-size:13px;color:var(--gold-light);position:relative}
+.urgency-pill{display:inline-flex;align-items:center;gap:.6rem;background:rgba(200,151,58,.12);border:1px solid rgba(200,151,58,.35);border-radius:99px;padding:8px 20px;font-size:13px;color:var(--gold);margin-bottom:1.2rem;position:relative}
 .urgency-dot{width:7px;height:7px;background:var(--gold-light);border-radius:50%;animation:pulse 1.8s ease infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
 .countdown{display:flex;gap:.8rem;justify-content:center;margin-bottom:2.5rem;position:relative}
@@ -45,9 +45,9 @@ body{font-family:var(--sans);color:var(--text);background:#fff;line-height:1.75;
 .cd-num{font-family:var(--serif);font-size:2.4rem;font-weight:600;color:#fff;line-height:1;display:block}
 .cd-lbl{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:3px;display:block}
 .cd-sep{font-family:var(--serif);font-size:2rem;color:rgba(255,255,255,.2);align-self:flex-start;margin-top:4px}
-.btn-gold{display:inline-block;background:var(--gold);color:#fff;font-family:var(--sans);font-size:15px;font-weight:500;padding:15px 38px;border-radius:4px;text-decoration:none;letter-spacing:.02em;transition:all .2s}
+.btn-gold{display:inline-block;background:var(--gold);color:#fff;font-family:var(--sans);font-size:15px;font-weight:500;padding:15px 38px;border-radius:4px;text-decoration:none;letter-spacing:.02em;transition:all .2s ease}
 .btn-gold:hover{background:var(--gold-light);transform:translateY(-1px)}
-.btn-outline{display:inline-block;background:transparent;color:rgba(255,255,255,.75);font-family:var(--sans);font-size:14px;padding:13px 30px;border:1px solid rgba(255,255,255,.2);border-radius:4px;text-decoration:none;transition:all .2s}
+.btn-outline{display:inline-block;background:transparent;color:rgba(255,255,255,.75);font-family:var(--sans);font-size:14px;padding:13px 30px;border:1px solid rgba(255,255,255,.2);border-radius:4px;text-decoration:none;transition:all .2s ease}
 .btn-outline:hover{border-color:rgba(255,255,255,.55);color:#fff}
 .hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center;position:relative}
 
@@ -135,7 +135,7 @@ p:last-child{margin-bottom:0}
 .donar-btns{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center;margin-bottom:2rem}
 
 /* STICKY */
-.sticky{position:fixed;bottom:0;left:0;right:0;background:var(--ocean-deep);border-top:1px solid rgba(255,255,255,.1);padding:11px 1.5rem;display:flex;align-items:center;justify-content:space-between;z-index:100;transform:translateY(120%);transition:transform .3s}
+.sticky{position:fixed;bottom:0;left:0;right:0;background:var(--ocean-deep);border-top:1px solid rgba(255,255,255,.1);padding:11px 1.5rem;display:flex;align-items:center;justify-content:space-between;z-index:999;transform:translateY(100%);transition:transform .3s ease}
 .sticky.on{transform:translateY(0)}
 .sticky-txt{font-size:13px;color:rgba(255,255,255,.65)}
 .sticky-txt strong{color:var(--gold-light)}
@@ -160,7 +160,7 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none}
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <img class="hero-logo" src="data:logo CRM (3)/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/9sADwABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAAoACgDASIAAhEBAxEB/8QAGQAAAwEBAQAAAAAAAAAAAAAAAQIDBAX/xAA6EAABBAAEBAQDBAQHAwUAAAABAAECAxEEEiExQQUTUWEiMnGBkaGxwdHw4TNyBhQjUpLxFjRCYnI=" alt="Céu da Rainha do Mar">
+  <img class="hero-logo" src="./images/logo.png" alt="Céu da Rainha do Mar" />
   <div class="hero-eyebrow">Mallorca, Islas Baleares · Comunidad de Santo Daime</div>
   <h1>Llevamos 32 años aquí.<br>Necesitamos <em>tu ayuda</em> para quedarnos.</h1>
   <p class="hero-lead">Ayudanos a proteger nuestro hogar espiritual.</p>
@@ -196,9 +196,9 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none}
     <div class="carta-text">
       <p class="opening">Querida hermandad: escribimos esto con el corazón abierto, como solo se puede escribir entre quienes comparten el camino del Daime.</p>
       <p>Somos Esperanza y Miguel Ángel, dirigentes del Céu da Rainha do Mar, iglesia del Santo Daime en Mallorca.</p>
-      <p>A finales de marzo recibimos la notificación de que debíamos abandonar la casa donde se encuentra nuestra iglesia. Sin embargo, el banco nos ha ofrecido la posibilidad de adquirirla por 490.000 €, cuando su valor de mercado ronda los 800.000 €. Se trata de una oportunidad única para asegurar, por primera vez, un hogar permanente para nuestra comunidad.</p>
-      <p>Esta casa es mucho más que un lugar físico. Es nuestro templo, nuestro hogar y el corazón de la familia daimista en Mallorca. Aquí realizamos nuestros trabajos espirituales, recibimos hermanos y hermanas de todo el mundo y compartimos una historia construida durante años de fraternidad, servicio y camino espiritual.</p>
-      <p>No somos expertos en campañas ni en marketing. Somos fardados de la doctrina que hoy acuden a su familia espiritual en el momento más importante de nuestra historia. Agradecemos de corazón cualquier ayuda, ya sea mediante una donación o compartiendo esta petición. Cada aportación nos acerca a preservar la Casa del Santo Daime en Mallorca para las generaciones presentes y futuras.</p>
+      <p>A finales de marzo recibimos la notificación de que debíamos abandonar la casa donde se encuentra nuestra iglesia. Sin embargo, el banco nos ha ofrecido la posibilidad de adquirirla por 490.000 €.</p>
+      <p>Esta casa es mucho más que un lugar físico. Es nuestro templo, nuestro hogar y el corazón de la familia daimista en Mallorca. Aquí realizamos nuestros trabajos espirituales, recibimos hermanos y hermanas que buscan la luz, y sembramos semillas de esperanza.</p>
+      <p>No somos expertos en campañas ni en marketing. Somos fardados de la doctrina que hoy acuden a su familia espiritual en el momento más importante de nuestra historia. Agradecemos de corazón cada gesto de ayuda que recibamos.</p>
       <p style="margin-top:2rem"><strong>Abrazos de Luz,</strong></p>
       <p><strong>Esperanza y Miguel Ángel</strong><br>Céu da Rainha do Mar – Mallorca</p>
     </div>
@@ -216,17 +216,17 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none}
       <div class="tl-item">
         <div class="tl-year">1993</div>
         <h4>El llamado</h4>
-        <p>Esperanza y Miguel Ángel conocen el Santo Daime en Ibiza. Profundamente tocados por la doctrina, viajan a la Vila Céu do Mapiá, en la Amazonía, donde conocen sus raíces y celebran su matrimonio, apadrinados por el Padrino Alfredo y la Madrina Rita.</p>
+        <p>Esperanza y Miguel Ángel conocen el Santo Daime en Ibiza. Profundamente tocados por la doctrina, viajan a la Vila Céu do Mapiá, en la Amazonía, donde conocen sus raíces y celebran su matrimonio espiritual.</p>
       </div>
       <div class="tl-item">
         <div class="tl-year">1994</div>
         <h4>Las raíces en Mallorca</h4>
-        <p>El 1 de junio llegan a Mallorca con el Daime entregado por el Padrino Alfredo. Meses después se realiza el primer trabajo espiritual en Son Rustic, dando origen a la comunidad que más tarde se convertiría en el Céu da Rainha do Mar.</p>
+        <p>El 1 de junio llegan a Mallorca con el Daime entregado por el Padrino Alfredo. Meses después se realiza el primer trabajo espiritual en Son Rustic, dando origen a la comunidad que más tarde sería conocida como el Céu da Rainha do Mar.</p>
       </div>
       <div class="tl-item">
         <div class="tl-year">1998</div>
         <h4>La comunidad florece</h4>
-        <p>La boda civil de Miguel y Esperanza reúne a hermanos y hermanas de toda España y Europa. Durante la celebración, en el monasterio de Bonany, se canta por primera vez en Mallorca "O Cruzeiro", del Mestre Irineu.</p>
+        <p>La boda civil de Miguel y Esperanza reúne a hermanos y hermanas de toda España y Europa. Durante la celebración, en el monasterio de Bonany, se canta por primera vez en Mallorca "O Cruzerio" con presencia de maestros de la tradición amazónica.</p>
       </div>
       <div class="tl-item">
         <div class="tl-year">1999</div>
@@ -236,7 +236,7 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none}
       <div class="tl-item">
         <div class="tl-year">2000</div>
         <h4>Fortaleza en la prueba</h4>
-        <p>El arresto de Chico Corrente y Fernando Ribeiro marca un momento difícil para la comunidad daimista. Aun así, la doctrina continúa creciendo y fortaleciéndose gracias a la unión y perseverancia de sus miembros.</p>
+        <p>El arresto de Chico Corrente y Fernando Ribeiro marca un momento difícil para la comunidad daimista. Aun así, la doctrina continúa creciendo y fortaleciéndose gracias a la unión y perseverancia de sus seguidores.</p>
       </div>
       <div class="tl-item">
         <div class="tl-year">2001</div>
@@ -246,7 +246,7 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none}
       <div class="tl-item">
         <div class="tl-year">2008</div>
         <h4>Encontramos un hogar</h4>
-        <p>Después de años realizando nuestros trabajos en distintos lugares de la isla, encontramos la casa que hoy alberga el Céu da Rainha do Mar. Con trabajo, amor y esfuerzo colectivo, este espacio se transformó en nuestro hogar espiritual.</p>
+        <p>Después de años realizando nuestros trabajos en distintos lugares de la isla, encontramos la casa que hoy alberga el Céu da Rainha do Mar. Con trabajo, amor y esfuerzo colectivo, este espacio se convierte en nuestro templo.</p>
       </div>
       <div class="tl-item">
         <div class="tl-year">2017</div>
@@ -256,7 +256,7 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none}
       <div class="tl-item">
         <div class="tl-year">2025</div>
         <h4>Un momento decisivo</h4>
-        <p>Después de más de tres décadas construyendo esta comunidad, recibimos la oportunidad de adquirir la casa que ha sido nuestro hogar espiritual durante tantos años. Hoy trabajamos juntos para preservar este legado y asegurar su futuro.</p>
+        <p>Después de más de tres décadas construyendo esta comunidad, recibimos la oportunidad de adquirir la casa que ha sido nuestro hogar espiritual durante tantos años. Hoy trabajamos juntos para que siga siendo el corazón del Daime en Baleares.</p>
       </div>
     </div>
   </div>
@@ -283,7 +283,8 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none}
     </div>
 
     <div class="promise-box">
-      <strong>Compromiso de transparencia total:</strong> El Céu da Rainha do Mar es una asociación registrada legalmente en España. Podemos facilitar toda la documentación que necesites — estatutos, registros y detalles completos de la operación.</div>
+      <strong>Compromiso de transparencia total:</strong> El Céu da Rainha do Mar es una asociación registrada legalmente en España. Podemos facilitar toda la documentación que necesites — estatutos, certificados de legalidad, informes financieros y cualquier dato que solicites.
+    </div>
   </div>
 </section>
 
@@ -295,19 +296,19 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none}
     <ul class="impact-list">
       <li>
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <div><strong>Un hogar permanente para la doctrina en Baleares</strong><span>Propiedad propia significa ceremonia protegida, sin depender de un propietario externo que pueda cambiar de decisión.</span></div>
+        <div><strong>Un hogar permanente para la doctrina en Baleares</strong><span>Propiedad propia significa ceremonia protegida, sin depender de un propietario externo que pueda cambiar de decisión en cualquier momento.</span></div>
       </li>
       <li>
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-        <div><strong>Dos familias fundadoras y una comunidad viva</strong><span>Esperanza, Miguel Ángel, Luis, Rosa, Marta, Samuel, Diana, Tupac y todos los que han llegado a lo largo de 32 años forman una familia unida por la doctrina.</span></div>
+        <div><strong>Dos familias fundadoras y una comunidad viva</strong><span>Esperanza, Miguel Ángel, Luis, Rosa, Marta, Samuel, Diana, Tupac y todos los que han llegado a lo largo de 32 años forman la base de esta familia espiritual.</span></div>
       </li>
       <li>
         <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-        <div><strong>Continuidad para las generaciones que vienen</strong><span>Un santuario propio puede abrir sus puertas con seguridad a nuevas personas que buscan la doctrina en las Baleares y en Europa.</span></div>
+        <div><strong>Continuidad para las generaciones que vienen</strong><span>Un santuario propio puede abrir sus puertas con seguridad a nuevas personas que buscan la doctrina en las Baleares y en toda España.</span></div>
       </li>
       <li>
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <div><strong>Protección del entorno natural</strong><span>El espacio físico y su naturaleza forman parte integral de nuestra práctica. Como propietarios, podemos cuidarlo y preservarlo para siempre.</span></div>
+        <div><strong>Protección del entorno natural</strong><span>El espacio físico y su naturaleza forman parte integral de nuestra práctica. Como propietarios, podemos cuidarlo y preservarlo para futuras generaciones.</span></div>
       </li>
     </ul>
   </div>
@@ -390,7 +391,8 @@ footer a{color:rgba(255,255,255,.35);text-decoration:none}
     </div>
 
     <div class="promise-box" style="max-width:540px;margin:0 auto">
-      <strong>¿Tienes preguntas?</strong> Podemos enviarte la documentación legal de la asociación, los estatutos o cualquier información que necesites antes de decidir. Solo pídelo a Esperanza directamente.</div>
+      <strong>¿Tienes preguntas?</strong> Podemos enviarte la documentación legal de la asociación, los estatutos o cualquier información que necesites antes de decidir. Solo pídelo a Esperanza directamente — sin intermediarios, sin formularios.
+    </div>
   </div>
 </section>
 
